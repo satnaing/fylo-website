@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+:root {
+  /* ========== Color Variables ========== */
+  --primary-color-light: hsl(217, 28%, 15%);
+  --primary-color: hsl(218, 28%, 13%);
+  --primary-color-dark: hsl(216, 53%, 9%);
+  --dark-blue: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --red: hsl(0, 100%, 63%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* ========== Screen Sizes ========== */
+/* ========== Media Query Mixins ========== */
+/* ========== Fonts & Typography ========== */
+/* ========== Resets ========== */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+/* ========== Layouts ========== */
+.main__layout {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* ========== HEADER ========== */
+.header {
+  height: 70px;
+}
+
+.nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.nav__container .logo__img {
+  width: 80px;
+}
+
+.nav__container .nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__container .nav__links li {
+  margin-left: 1.5rem;
+  font-size: 0.75rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.nav__container .nav__links li a {
+  color: var(--white);
+}
+
+.nav__container .nav__links li:first-child {
+  margin-left: 0;
+}
+
+/* ========== INTRO SECTION ========== */
+/* ========== FEATURES SECTION ========== */
+/* ========== TEAM SECTION ========== */
+/* ========== TESTIMONIAL SECTION ========== */
+/* ========== SIGN IN SECTION ========== */
+/*# sourceMappingURL=main.css.map */
