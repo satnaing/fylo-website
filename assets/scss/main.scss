@@ -46,7 +46,7 @@ $font-bold: 700;
 
 $h1: 1.625rem;
 $h2: 1.25rem;
-$h3: 0.75rem;
+$h3: 0.813rem;
 $btn-font-size: 0.938rem;
 
 $big-font-size: 1.063rem;
@@ -95,7 +95,7 @@ body {
   font-size: $normal-font-size;
   background-color: var(--primary-color);
   color: var(--white);
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 /* ========== Layouts ========== */
@@ -104,8 +104,8 @@ body {
 }
 
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .container {
@@ -181,7 +181,7 @@ body {
 /* ========== INTRO SECTION ========== */
 #intro {
   background: url(../img/bg-curvy-mobile.svg),
-    linear-gradient(var(--primary-color-light) 55%, var(--primary-color) 55%);
+    linear-gradient(var(--primary-color-light) 60%, var(--primary-color) 60%);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: 50%;
@@ -337,3 +337,107 @@ body {
 }
 
 /* ========== SIGN IN SECTION ========== */
+#signin {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color) 50%,
+    var(--primary-color-dark) 50%
+  );
+  padding-bottom: 0;
+}
+.signin__container {
+  .signin__card {
+    background-color: var(--primary-color-light);
+    padding: 2.5rem 2rem;
+    border-radius: 0.75rem;
+
+    h2 {
+      font-size: $h2;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .input__container {
+      .email__container {
+        width: 100%;
+        background: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+
+        .email__input {
+          width: 100%;
+          outline: none;
+          border: none;
+        }
+      }
+
+      .email__btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* ========== FOOTER ========== */
+#footer {
+  background-color: var(--primary-color-dark);
+  padding-bottom: 1rem;
+}
+.footer__container {
+  // display: flex;
+  // flex-direction: column;
+  font-size: $big-font-size;
+  padding: 1rem;
+
+  .footer__info {
+    margin: 1rem 0;
+    .logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer_icon_info {
+      display: grid;
+      grid-template-columns: 2.25rem 1fr;
+      margin-bottom: 1rem;
+
+      img {
+        margin-top: 0.5rem;
+        // width: 1rem;
+      }
+    }
+  }
+
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+
+    a {
+      color: var(--white);
+      margin: 0.5rem 0;
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    a {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      padding: 5px;
+      margin: 0.5rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

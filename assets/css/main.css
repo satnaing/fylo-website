@@ -44,7 +44,7 @@ body {
   font-size: 0.938rem;
   background-color: var(--primary-color);
   color: var(--white);
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 /* ========== Layouts ========== */
@@ -53,8 +53,8 @@ body {
 }
 
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .container {
@@ -123,7 +123,7 @@ body {
 
 .nav__container .nav__links li {
   margin-left: 1.5rem;
-  font-size: 0.75rem;
+  font-size: 0.813rem;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
@@ -138,8 +138,8 @@ body {
 
 /* ========== INTRO SECTION ========== */
 #intro {
-  background: url(../img/bg-curvy-mobile.svg), -webkit-gradient(linear, left top, left bottom, color-stop(55%, var(--primary-color-light)), color-stop(55%, var(--primary-color)));
-  background: url(../img/bg-curvy-mobile.svg), linear-gradient(var(--primary-color-light) 55%, var(--primary-color) 55%);
+  background: url(../img/bg-curvy-mobile.svg), -webkit-gradient(linear, left top, left bottom, color-stop(60%, var(--primary-color-light)), color-stop(60%, var(--primary-color)));
+  background: url(../img/bg-curvy-mobile.svg), linear-gradient(var(--primary-color-light) 60%, var(--primary-color) 60%);
   background-size: contain;
   background-repeat: no-repeat;
   background-position-y: 50%;
@@ -276,7 +276,7 @@ body {
 }
 
 .testi__container .card .profile .profile__info h3 {
-  font-size: 0.75rem;
+  font-size: 0.813rem;
 }
 
 .testi__container .card .profile .profile__info span {
@@ -300,4 +300,112 @@ body {
 }
 
 /* ========== SIGN IN SECTION ========== */
+#signin {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--primary-color)), color-stop(50%, var(--primary-color-dark)));
+  background: linear-gradient(to bottom, var(--primary-color) 50%, var(--primary-color-dark) 50%);
+  padding-bottom: 0;
+}
+
+.signin__container .signin__card {
+  background-color: var(--primary-color-light);
+  padding: 2.5rem 2rem;
+  border-radius: 0.75rem;
+}
+
+.signin__container .signin__card h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.signin__container .signin__card p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.signin__container .signin__card .input__container .email__container {
+  width: 100%;
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+.signin__container .signin__card .input__container .email__container .email__input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.signin__container .signin__card .input__container .email__btn {
+  width: 100%;
+}
+
+/* ========== FOOTER ========== */
+#footer {
+  background-color: var(--primary-color-dark);
+  padding-bottom: 1rem;
+}
+
+.footer__container {
+  font-size: 1.063rem;
+  padding: 1rem;
+}
+
+.footer__container .footer__info {
+  margin: 1rem 0;
+}
+
+.footer__container .footer__info .logo {
+  margin-bottom: 1rem;
+}
+
+.footer__container .footer__info .footer_icon_info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.25rem 1fr;
+      grid-template-columns: 2.25rem 1fr;
+  margin-bottom: 1rem;
+}
+
+.footer__container .footer__info .footer_icon_info img {
+  margin-top: 0.5rem;
+}
+
+.footer__container .footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0;
+}
+
+.footer__container .footer__nav a {
+  color: var(--white);
+  margin: 0.5rem 0;
+}
+
+.footer__container .footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.footer__container .footer__social a {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  margin: 0.5rem;
+}
+
+.footer__container .footer__social a img {
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

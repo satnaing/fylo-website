@@ -12,8 +12,8 @@ The designs were created to the following widths:
 ### Primary
 
 - Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
-- Dark Blue (main background): hsl(218, 28%, 13%)
-- Dark Blue (footer background): hsl(216, 53%, 9%)
+- Dark Blue (main background): hsl(218, 28%, 13%) #181f2a
+- Dark Blue (footer background): hsl(216, 53%, 9%) #0b1523
 - Dark Blue (testimonials background): hsl(219, 30%, 18%)
 
 ### Accent
