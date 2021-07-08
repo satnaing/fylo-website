@@ -17,6 +17,7 @@ $tablet: 576px;
 $laptop: 768px;
 $desktop: 1024px;
 $nav-height: 70px;
+$z-index-nav: 10;
 
 /* ========== Media Query Mixins ========== */
 @mixin tablet {
@@ -43,16 +44,16 @@ $heading-font: "Raleway", sans-serif;
 
 $font-bold: 700;
 
-$h1: 1.5rem;
-$h2: 1.125rem;
+$h1: 1.625rem;
+$h2: 1.25rem;
 $h3: 0.75rem;
-$btn-font-size: 0.875rem;
+$btn-font-size: 0.938rem;
 
-$big-font-size: 1rem;
-$normal-font-size: 0.875rem;
-$small-font-size: 0.75rem;
+$big-font-size: 1.063rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.875rem;
 $smaller-font-size: 0.688rem;
-$tiny-font-size: 0.5rem;
+$tiny-font-size: 0.55rem;
 
 @include tablet {
   $h1: 2.5rem;
@@ -94,12 +95,17 @@ body {
   font-size: $normal-font-size;
   background-color: var(--primary-color);
   color: var(--white);
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 /* ========== Layouts ========== */
 .main__layout {
   overflow: hidden;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .container {
@@ -109,9 +115,37 @@ body {
   margin-right: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: $heading-font;
+  font-size: $btn-font-size;
+  font-weight: $font-bold;
+  border: none;
+  padding: 1rem 4.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background-color 700;
+
+  margin: 1rem auto;
+
+  &:hover {
+    background-color: var(--cyan);
+  }
+}
+
 /* ========== HEADER ========== */
 .header {
+  width: 100%;
   height: $nav-height;
+  position: absolute;
+  z-index: $z-index-nav;
 }
 
 .nav__container {
@@ -145,8 +179,161 @@ body {
 }
 
 /* ========== INTRO SECTION ========== */
+#intro {
+  background: url(../img/bg-curvy-mobile.svg),
+    linear-gradient(var(--primary-color-light) 55%, var(--primary-color) 55%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  padding-top: $nav-height;
+  padding-bottom: $nav-height;
+
+  .intro__container {
+    gap: 2rem;
+
+    .img__container {
+      width: 90%;
+      margin: auto;
+      margin-top: 2rem;
+    }
+
+    .intro__data {
+      text-align: center;
+
+      .intro__title {
+        font-family: $heading-font;
+        font-size: $h1;
+      }
+
+      .intro__paragraph {
+        font-size: $normal-font-size;
+        padding: 1rem 1.25rem;
+      }
+    }
+  }
+}
 
 /* ========== FEATURES SECTION ========== */
+.features__container {
+  gap: 3rem;
+
+  .single__feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+    .feature__heading {
+      margin: 1.25rem auto;
+      font-weight: $font-bold;
+      font-family: $h2;
+      font-family: $heading-font;
+    }
+
+    .feature__paragraph {
+      text-align: center;
+    }
+  }
+}
+
 /* ========== TEAM SECTION ========== */
+.team__container {
+  // margin: 5rem auto;
+
+  .img__container {
+    padding: 2rem 1rem;
+  }
+
+  .team__data {
+    .team__heading {
+      font-size: $h2;
+      font-weight: $font-bold;
+      font-family: $heading-font;
+
+      text-align: center;
+    }
+
+    .team__paragraph {
+      font-size: $normal-font-size;
+      font-family: $body-font;
+
+      margin: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .link__container {
+    .team__link {
+      font-size: $small-font-size;
+      color: var(--cyan);
+      margin: auto 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid var(--cyan);
+
+      .team__link__arrow {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
 /* ========== TESTIMONIAL SECTION ========== */
+.testi__container {
+  padding: 1rem;
+  gap: 2rem;
+
+  .card {
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    padding: 1.75rem;
+    line-height: 1rem;
+
+    .testi__text {
+      font-size: $smaller-font-size;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+      .profile__avatar {
+        width: 13%;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .profile__info {
+        margin-left: 1rem;
+        h3 {
+          font-size: $h3;
+        }
+        span {
+          font-size: $tiny-font-size;
+        }
+      }
+    }
+  }
+
+  .first__card {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -9%;
+      left: 2%;
+      background-image: url(../img/bg-quotes.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
 /* ========== SIGN IN SECTION ========== */
