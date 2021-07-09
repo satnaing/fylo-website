@@ -6,39 +6,66 @@
     var(--primary-color-dark) 50%
   );
   padding-bottom: 0;
-}
-.signin__container {
-  .signin__card {
-    background-color: var(--primary-color-light);
-    padding: 2.5rem 2rem;
-    border-radius: 0.75rem;
 
-    h2 {
-      font-size: var(--h2);
-      text-align: center;
-    }
+  .signin__container {
+    .signin__card {
+      background-color: var(--primary-color-light);
+      padding: 2.5rem 2rem;
+      border-radius: 0.75rem;
 
-    p {
-      text-align: center;
-      margin: 1rem 0;
-    }
-
-    .input__container {
-      .email__container {
-        width: 100%;
-        background: var(--white);
-        padding: 0.5rem 1rem;
-        border-radius: 2rem;
-
-        .email__input {
-          width: 100%;
-          outline: none;
-          border: none;
-        }
+      h2 {
+        font-size: var(--h2);
+        text-align: center;
       }
 
-      .email__btn {
-        width: 100%;
+      p {
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      .input__container {
+        display: grid;
+
+        .email__container {
+          width: 100%;
+          background: var(--white);
+          padding: 0.5rem 1rem;
+          border-radius: 2rem;
+
+          .email__input {
+            width: 100%;
+            outline: none;
+            border: none;
+          }
+        }
+
+        .email__btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  #signin .signin__container {
+    .signin__card {
+      width: 60%;
+      margin: auto;
+      padding: 2.5rem 3.5rem;
+
+      .input__container {
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+
+        .email__container {
+          padding: 1rem 2rem;
+        }
+
+        .email__btn {
+          margin: 0;
+          padding: 1.125rem;
+        }
       }
     }
   }

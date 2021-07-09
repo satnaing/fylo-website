@@ -22,9 +22,7 @@
       margin: 1rem;
       margin-bottom: 0;
     }
-  }
 
-  .link__container {
     .team__link {
       font-size: var(--small-font-size);
       color: var(--cyan);
@@ -34,6 +32,32 @@
 
       .team__link__arrow {
         vertical-align: middle;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .team__container {
+    grid-template-columns: 1fr 1fr;
+
+    .team__data {
+      align-self: center;
+      .team__heading {
+        font-size: var(--h1);
+        text-align: left;
+
+        span {
+          display: block;
+        }
+      }
+
+      .team__paragraph {
+        margin: 0.5rem 0;
+      }
+
+      .team__link {
+        margin: 0;
       }
     }
   }

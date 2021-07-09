@@ -21,3 +21,12 @@
     }
   }
 }
+
+@include desktop {
+  .features__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}

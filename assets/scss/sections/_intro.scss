@@ -17,6 +17,17 @@
     height: 42%;
   }
 
+  @include desktop {
+    .intro__bg {
+      bottom: -4%;
+      // visibility: hidden;
+    }
+    .fill__bg {
+      top: 0;
+      height: 0;
+    }
+  }
+
   padding-top: $nav-height;
   padding-bottom: $nav-height;
 
@@ -29,6 +40,13 @@
       width: 90%;
       margin: auto;
       margin-top: 2rem;
+      text-align: center;
+
+      @include desktop {
+        img {
+          width: 50%;
+        }
+      }
     }
 
     .intro__data {
@@ -43,6 +61,34 @@
         font-size: var(--normal-font-size);
         padding: 1rem 1.25rem;
       }
+    }
+
+    @include desktop {
+      .intro__data {
+        max-width: 45rem;
+        margin: auto;
+
+        .intro__paragraph {
+          padding: 1rem 3rem;
+          font-size: 1.3125rem;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    .intro__container {
+      padding-top: 3rem;
+    }
+  }
+}
+
+@include desktop {
+  #intro {
+    padding-top: 1rem;
+
+    .intro__container {
+      gap: 1rem;
     }
   }
 }

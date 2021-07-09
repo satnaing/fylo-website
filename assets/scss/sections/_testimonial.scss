@@ -55,3 +55,23 @@
     }
   }
 }
+
+@include desktop {
+  .testi__container {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .first__card {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: -2%;
+        background-image: url(../img/bg-quotes.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+}
