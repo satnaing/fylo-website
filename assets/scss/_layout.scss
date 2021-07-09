@@ -1,0 +1,49 @@
+/* ========== Layouts ========== */
+body {
+  font-family: $body-font;
+  font-size: var(--normal-font-size);
+  background-color: var(--primary-color);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.main__layout {
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: $heading-font;
+  font-size: var(--btn-font-size);
+  font-weight: $font-bold;
+  border: none;
+  padding: 1rem 4.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: background-color 700;
+
+  margin: 1rem auto;
+
+  &:hover {
+    background-color: var(--cyan);
+  }
+}

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+/* ========== Variables ========== */
+:root {
+  // Colors
+  --primary-color-light: hsl(217, 28%, 15%);
+  --primary-color: hsl(218, 28%, 13%);
+  --primary-color-dark: hsl(216, 53%, 9%);
+  --dark-blue: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --red: hsl(0, 100%, 63%);
+  --white: hsl(0, 0%, 100%);
+
+  // Fonts
+  --h1: 1.625rem;
+  --h2: 1.25rem;
+  --h3: 0.813rem;
+  --btn-font-size: 0.938rem;
+
+  --big-font-size: 1.063rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.688rem;
+  --tiny-font-size: 0.55rem;
+}
+
+// Screen Sizes
+$tablet: 576px;
+$laptop: 768px;
+$desktop: 1024px;
+$nav-height: 70px;
+$z-index-nav: 10;
+
+// Fonts & Typography
+$body-font: "Open Sans", sans-serif;
+$heading-font: "Raleway", sans-serif;
+$font-bold: 700;
+
+/* ========== Media Query Mixins ========== */
+@mixin tablet {
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Change Fonts based on Device Size
+@include laptop {
+  :root {
+    --h1: 2.5rem;
+    --h2: 1.5rem;
+    --h3: 1rem;
+    --btn-font-size: 1rem;
+
+    --big-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+    --tiny-font-size: 0.688rem;
+  }
+}
+
+/* ========== Resets ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,57 @@
+/* ========== TESTIMONIAL SECTION ========== */
+.testi__container {
+  padding: 1rem;
+  gap: 2rem;
+
+  .card {
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    padding: 1.75rem;
+    line-height: 1rem;
+
+    .testi__text {
+      font-size: var(--smaller-font-size);
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+      .profile__avatar {
+        width: 13%;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .profile__info {
+        margin-left: 1rem;
+        h3 {
+          font-size: var(--h3);
+        }
+        span {
+          font-size: var(--tiny-font-size);
+        }
+      }
+    }
+  }
+
+  .first__card {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -9%;
+      left: 2%;
+      background-image: url(../img/bg-quotes.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

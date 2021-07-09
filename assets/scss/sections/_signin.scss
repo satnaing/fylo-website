@@ -1,0 +1,45 @@
+/* ========== SIGN IN SECTION ========== */
+#signin {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color) 50%,
+    var(--primary-color-dark) 50%
+  );
+  padding-bottom: 0;
+}
+.signin__container {
+  .signin__card {
+    background-color: var(--primary-color-light);
+    padding: 2.5rem 2rem;
+    border-radius: 0.75rem;
+
+    h2 {
+      font-size: var(--h2);
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .input__container {
+      .email__container {
+        width: 100%;
+        background: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+
+        .email__input {
+          width: 100%;
+          outline: none;
+          border: none;
+        }
+      }
+
+      .email__btn {
+        width: 100%;
+      }
+    }
+  }
+}

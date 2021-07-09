@@ -1,0 +1,40 @@
+/* ========== TEAM SECTION ========== */
+.team__container {
+  // margin: 5rem auto;
+
+  .img__container {
+    padding: 2rem 1rem;
+  }
+
+  .team__data {
+    .team__heading {
+      font-size: var(--h2);
+      font-weight: $font-bold;
+      font-family: $heading-font;
+
+      text-align: center;
+    }
+
+    .team__paragraph {
+      font-size: var(--normal-font-size);
+      font-family: $body-font;
+
+      margin: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .link__container {
+    .team__link {
+      font-size: var(--small-font-size);
+      color: var(--cyan);
+      margin: auto 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid var(--cyan);
+
+      .team__link__arrow {
+        vertical-align: middle;
+      }
+    }
+  }
+}

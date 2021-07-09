@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+/* ========== Variables ========== */
 :root {
-  /* ========== Color Variables ========== */
   --primary-color-light: hsl(217, 28%, 15%);
   --primary-color: hsl(218, 28%, 13%);
   --primary-color-dark: hsl(216, 53%, 9%);
@@ -20,9 +20,7 @@
   --tiny-font-size: 0.55rem;
 }
 
-/* ========== Screen Sizes ========== */
 /* ========== Media Query Mixins ========== */
-/* ========== Fonts & Typography ========== */
 @media only screen and (min-width: 768px) {
   :root {
     --h1: 2.5rem;
@@ -62,6 +60,7 @@ a {
   text-decoration: none;
 }
 
+/* ========== Layouts ========== */
 body {
   font-family: "Open Sans", sans-serif;
   font-size: var(--normal-font-size);
@@ -70,7 +69,6 @@ body {
   line-height: 1.5;
 }
 
-/* ========== Layouts ========== */
 .main__layout {
   overflow: hidden;
 }

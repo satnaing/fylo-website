@@ -1,0 +1,23 @@
+/* ========== FEATURES SECTION ========== */
+.features__container {
+  gap: 3rem;
+
+  .single__feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+    .feature__heading {
+      margin: 1.25rem auto;
+      font-weight: $font-bold;
+      font-family: var(--h2);
+      font-family: $heading-font;
+    }
+
+    .feature__paragraph {
+      text-align: center;
+    }
+  }
+}
