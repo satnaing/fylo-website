@@ -10,6 +10,17 @@
   --blue: hsl(198, 60%, 50%);
   --red: hsl(0, 100%, 63%);
   --white: hsl(0, 0%, 100%);
+
+  --h1: 1.625rem;
+  --h2: 1.25rem;
+  --h3: 0.813rem;
+  --btn-font-size: 0.938rem;
+
+  --big-font-size: 1.063rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.688rem;
+  --tiny-font-size: 0.55rem;
 }
 
 /* ========== Screen Sizes ========== */
@@ -21,7 +32,7 @@ $z-index-nav: 10;
 
 /* ========== Media Query Mixins ========== */
 @mixin tablet {
-  @media only screen and (min-width: $tablet) {
+  @media only screen and (min-width: 576px) {
     @content;
   }
 }
@@ -44,26 +55,19 @@ $heading-font: "Raleway", sans-serif;
 
 $font-bold: 700;
 
-$h1: 1.625rem;
-$h2: 1.25rem;
-$h3: 0.813rem;
-$btn-font-size: 0.938rem;
+@include laptop {
+  :root {
+    --h1: 2.5rem;
+    --h2: 1.5rem;
+    --h3: 1rem;
+    --btn-font-size: 1rem;
 
-$big-font-size: 1.063rem;
-$normal-font-size: 0.938rem;
-$small-font-size: 0.875rem;
-$smaller-font-size: 0.688rem;
-$tiny-font-size: 0.55rem;
-
-@include tablet {
-  $h1: 2.5rem;
-  $h2: 1.25rem;
-  $h3: 1rem;
-  $btn-font-size: 1rem;
-
-  $big-font-size: 1.125rem;
-  $normal-font-size: 1rem;
-  $small-font-size: 0.875rem;
+    --big-font-size: 1.125rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+    --tiny-font-size: 0.688rem;
+  }
 }
 
 /* ========== Resets ========== */
@@ -92,7 +96,7 @@ a {
 
 body {
   font-family: $body-font;
-  font-size: $normal-font-size;
+  font-size: var(--normal-font-size);
   background-color: var(--primary-color);
   color: var(--white);
   line-height: 1.5;
@@ -125,7 +129,7 @@ body {
   background-color: var(--blue);
   color: var(--white);
   font-family: $heading-font;
-  font-size: $btn-font-size;
+  font-size: var(--btn-font-size);
   font-weight: $font-bold;
   border: none;
   padding: 1rem 4.5rem;
@@ -163,7 +167,7 @@ body {
 
     li {
       margin-left: 1.5rem;
-      font-size: $h3;
+      font-size: var(--h3);
       font-family: $heading-font;
       font-weight: bold;
 
@@ -180,16 +184,30 @@ body {
 
 /* ========== INTRO SECTION ========== */
 #intro {
-  background: url(../img/bg-curvy-mobile.svg),
-    linear-gradient(var(--primary-color-light) 60%, var(--primary-color) 60%);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-y: 50%;
+  background-color: var(--primary-color-light);
+  position: relative;
+
+  .intro__bg {
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+  }
+
+  .fill__bg {
+    position: absolute;
+    top: 58%;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 42%;
+  }
+
   padding-top: $nav-height;
   padding-bottom: $nav-height;
 
   .intro__container {
     gap: 2rem;
+    position: relative;
+    z-index: 5;
 
     .img__container {
       width: 90%;
@@ -202,11 +220,11 @@ body {
 
       .intro__title {
         font-family: $heading-font;
-        font-size: $h1;
+        font-size: var(--h1);
       }
 
       .intro__paragraph {
-        font-size: $normal-font-size;
+        font-size: var(--normal-font-size);
         padding: 1rem 1.25rem;
       }
     }
@@ -227,7 +245,7 @@ body {
     .feature__heading {
       margin: 1.25rem auto;
       font-weight: $font-bold;
-      font-family: $h2;
+      font-family: var(--h2);
       font-family: $heading-font;
     }
 
@@ -247,7 +265,7 @@ body {
 
   .team__data {
     .team__heading {
-      font-size: $h2;
+      font-size: var(--h2);
       font-weight: $font-bold;
       font-family: $heading-font;
 
@@ -255,7 +273,7 @@ body {
     }
 
     .team__paragraph {
-      font-size: $normal-font-size;
+      font-size: var(--normal-font-size);
       font-family: $body-font;
 
       margin: 1rem;
@@ -265,7 +283,7 @@ body {
 
   .link__container {
     .team__link {
-      font-size: $small-font-size;
+      font-size: var(--small-font-size);
       color: var(--cyan);
       margin: auto 1rem;
       padding: 0.25rem 0;
@@ -290,7 +308,7 @@ body {
     line-height: 1rem;
 
     .testi__text {
-      font-size: $smaller-font-size;
+      font-size: var(--smaller-font-size);
       letter-spacing: 1px;
       margin-bottom: 1rem;
     }
@@ -310,10 +328,10 @@ body {
       .profile__info {
         margin-left: 1rem;
         h3 {
-          font-size: $h3;
+          font-size: var(--h3);
         }
         span {
-          font-size: $tiny-font-size;
+          font-size: var(--tiny-font-size);
         }
       }
     }
@@ -352,7 +370,7 @@ body {
     border-radius: 0.75rem;
 
     h2 {
-      font-size: $h2;
+      font-size: var(--h2);
       text-align: center;
     }
 
@@ -390,7 +408,7 @@ body {
 .footer__container {
   // display: flex;
   // flex-direction: column;
-  font-size: $big-font-size;
+  font-size: var(--big-font-size);
   padding: 1rem;
 
   .footer__info {
