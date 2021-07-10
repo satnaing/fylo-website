@@ -36,6 +36,11 @@
 
         a {
           color: var(--white);
+
+          &:hover {
+            text-decoration: underline;
+            color: var(--cyan);
+          }
         }
       }
 

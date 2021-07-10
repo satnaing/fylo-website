@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="assets/img/favicon-32x32.png" />
+    <meta
+      name="description"
+      content="Solution of Frontend Mentor Challenge - Fylo dark theme landing page"
+    />
+
     <link
       rel="icon"
       type="image/png"
@@ -72,8 +78,6 @@
             alt="Curvy Background"
           />
         </picture>
-        <!-- <img class="intro__bg" src="assets/img/bg-curvy-desktop.svg" alt="" />  -->
-        <!-- icon-access-anywhere.svg -->
         <div class="fill__bg"></div>
       </section>
 
@@ -140,7 +144,7 @@
       <!-- TEAM SECTION -->
       <section id="team" class="section">
         <div class="team__container container grid">
-          <div class="img__container">
+          <div class="team__img__container">
             <img
               src="assets/img/illustration-stay-productive.png"
               alt="Stay Productive with Team"
@@ -161,7 +165,10 @@
             </p>
             <a href="#" class="team__link"
               >See how Fylo works
-              <img class="team__link__arrow" src="assets/img/icon-arrow.svg"
+              <img
+                class="team__link__arrow"
+                src="assets/img/icon-arrow.svg"
+                alt="Arrow Image"
             /></a>
           </div>
         </div>
@@ -244,7 +251,12 @@
               would be happy to help you.
             </p>
 
-            <div class="input__container">
+            <form
+              class="input__container"
+              action="mailto:satnaingdev@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
               <div class="email__container">
                 <input
                   class="email__input"
@@ -252,8 +264,12 @@
                   placeholder="email@example.com"
                 />
               </div>
-              <button class="email__btn btn">Get Started for Free</button>
-            </div>
+              <input
+                type="submit"
+                class="email__btn btn"
+                value="Get Started for Free"
+              />
+            </form>
           </div>
         </div>
       </section>
@@ -296,18 +312,24 @@
           <a href="#">Privacy</a>
         </div>
         <div class="footer__social footer__child">
-          <a href="#">
+          <a href="#" aria-label="Social Media | Facebook">
             <img src="assets/img/bxl-facebook-w.svg" alt="" />
           </a>
-          <a href="#">
+          <a href="#" aria-label="Social Media | Twitter">
             <img src="assets/img/bxl-twitter-w.svg" alt="" />
           </a>
-          <a href="#">
+          <a href="#" aria-label="Social Media | Instagram">
             <img src="assets/img/bxl-instagram-w.svg" alt="" />
           </a>
         </div>
       </div>
     </footer>
+
+    <!-- ========== Scroll Reveal ========== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ========== Load JavaScript ========== -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
 

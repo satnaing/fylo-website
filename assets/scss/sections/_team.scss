@@ -2,7 +2,7 @@
 .team__container {
   // margin: 5rem auto;
 
-  .img__container {
+  .team__img__container {
     padding: 2rem 1rem;
   }
 
@@ -29,9 +29,15 @@
       margin: auto 1rem;
       padding: 0.25rem 0;
       border-bottom: 1px solid var(--cyan);
+      transition: all 0.5s;
 
       .team__link__arrow {
         vertical-align: middle;
+      }
+
+      &:hover {
+        color: var(--white);
+        border-bottom: 1px solid var(--white);
       }
     }
   }

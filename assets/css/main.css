@@ -109,8 +109,8 @@ body {
   padding: 1rem 4.5rem;
   border-radius: 3rem;
   cursor: pointer;
-  -webkit-transition: background-color 700;
-  transition: background-color 700;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s;
   margin: 1rem auto;
 }
 
@@ -170,6 +170,11 @@ body {
 
 .header .nav__container .nav__links li a {
   color: var(--white);
+}
+
+.header .nav__container .nav__links li a:hover {
+  text-decoration: underline;
+  color: var(--cyan);
 }
 
 @media only screen and (min-width: 1280px) {
@@ -337,7 +342,7 @@ body {
 }
 
 /* ========== TEAM SECTION ========== */
-.team__container .img__container {
+.team__container .team__img__container {
   padding: 2rem 1rem;
 }
 
@@ -361,10 +366,17 @@ body {
   margin: auto 1rem;
   padding: 0.25rem 0;
   border-bottom: 1px solid var(--cyan);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .team__container .team__data .team__link .team__link__arrow {
   vertical-align: middle;
+}
+
+.team__container .team__data .team__link:hover {
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
 }
 
 @media only screen and (min-width: 768px) {
