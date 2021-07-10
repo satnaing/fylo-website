@@ -22,9 +22,24 @@
   }
 }
 
+@include tablet {
+  .features__container {
+    max-width: $tablet;
+    margin: auto;
+  }
+}
+
+@include laptop {
+  .features__container {
+    max-width: $laptop + 200px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @include desktop {
   .features__container {
-    grid-template-columns: 1fr 1fr;
+    max-width: fit-content;
     gap: 6rem;
     padding-left: 8rem;
     padding-right: 8rem;

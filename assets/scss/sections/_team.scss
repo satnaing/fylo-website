@@ -37,14 +37,13 @@
   }
 }
 
-@include desktop {
+@include laptop {
   .team__container {
     grid-template-columns: 1fr 1fr;
 
     .team__data {
       align-self: center;
       .team__heading {
-        font-size: var(--h1);
         text-align: left;
 
         span {
@@ -53,12 +52,22 @@
       }
 
       .team__paragraph {
-        margin: 0.5rem 0;
+        margin: 1rem 0;
       }
 
       .team__link {
         margin: 0;
       }
+    }
+  }
+}
+
+@include desktop {
+  .team__container {
+    grid-template-columns: 1fr 1fr;
+
+    .team__data .team__heading {
+      font-size: var(--h1);
     }
   }
 }

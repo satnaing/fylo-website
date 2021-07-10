@@ -47,10 +47,11 @@
   }
 }
 
-@include desktop {
+@include laptop {
   #signin .signin__container {
     .signin__card {
-      width: 60%;
+      max-width: $laptop;
+      // width: 60%;
       margin: auto;
       padding: 2.5rem 3.5rem;
 
