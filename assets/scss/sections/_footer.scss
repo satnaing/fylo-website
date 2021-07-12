@@ -7,6 +7,19 @@
     padding: 1rem;
     gap: 0;
 
+    .footer__child {
+      .footer__link {
+        &:hover {
+          font-weight: $font-bold;
+        }
+      }
+
+      .social__icon {
+        width: 100%;
+        fill: var(--white);
+      }
+    }
+
     .footer__info {
       margin-top: 1rem;
       .logo {
@@ -49,8 +62,16 @@
         border-radius: 50%;
         width: 2rem;
         height: 2rem;
-        padding: 5px;
+        padding: 4px;
         margin: 0.5rem;
+
+        &:hover {
+          border: 1px solid var(--cyan);
+        }
+
+        &:hover .social__icon {
+          fill: var(--cyan);
+        }
 
         img {
           width: 100%;

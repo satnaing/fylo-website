@@ -598,6 +598,15 @@ body {
   gap: 0;
 }
 
+#footer .footer__container .footer__child .footer__link:hover {
+  font-weight: 700;
+}
+
+#footer .footer__container .footer__child .social__icon {
+  width: 100%;
+  fill: var(--white);
+}
+
 #footer .footer__container .footer__info {
   margin-top: 1rem;
 }
@@ -653,8 +662,16 @@ body {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  padding: 5px;
+  padding: 4px;
   margin: 0.5rem;
+}
+
+#footer .footer__container .footer__social a:hover {
+  border: 1px solid var(--cyan);
+}
+
+#footer .footer__container .footer__social a:hover .social__icon {
+  fill: var(--cyan);
 }
 
 #footer .footer__container .footer__social a img {
